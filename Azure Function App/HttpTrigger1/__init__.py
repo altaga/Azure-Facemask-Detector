@@ -18,8 +18,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             decoded_data = base64.b64decode(image)
             np_data = np.fromstring(decoded_data,np.uint8)
             frame = cv2.imdecode(np_data,cv2.IMREAD_UNCHANGED)
+            if(frame.shape[1] > frame.shape[0]):
+                width = int(640)
+                height = int(480)
+                dim = (width, height)
+                frame = cv2.resize(frame, dim, interpolation = cv2.INTER_AREA)
+            else:
+                width = int(480)
+                height = int(640)
+                dim = (width, height)
+                frame = cv2.resize(frame, dim, interpolation = cv2.INTER_AREA)
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+            faces = face_cascade.detectMultiScale(gray, 1.045,5, minSize=(100, 100))
             marker = 0
             predict=0
             # Loop face detection

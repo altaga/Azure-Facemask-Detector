@@ -9,7 +9,7 @@ with open('key.password', 'r') as file:
 start = time.time()
 
 camera = PiCamera()
-camera.resolution = (640, 480)
+camera.resolution = (640, 480) # Model Resolution
 camera.start_preview()
 camera.capture('/home/pi/Desktop/image.jpg')
 camera.stop_preview()

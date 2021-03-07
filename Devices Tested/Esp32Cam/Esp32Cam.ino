@@ -9,6 +9,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include "certs.h"
+#include <Pushbutton.h>
 
 // Pin definition for CAMERA_MODEL_AI_THINKER
 #define PWDN_GPIO_NUM     32
@@ -29,19 +30,26 @@
 #define PCLK_GPIO_NUM     22
 
 int pictureNumber = 0;
+Pushbutton button(12);
+
+void initWiFi() {
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+  }
+}
 
 void setup() {
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable brownout detector
-  Serial.begin(115200);
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(13, OUTPUT);
+  digitalWrite(14, LOW);
+  digitalWrite(15, LOW);
+  digitalWrite(13, LOW);
   delay(1000);
-
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting to WiFi..");
-  }
-
+  initWiFi();
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -74,39 +82,57 @@ void setup() {
   }
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
-    Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
-  camera_fb_t * fb = NULL;
-  // Take Picture with Camera
-  fb = esp_camera_fb_get();
-  if (!fb) {
-    Serial.println("Camera capture failed");
-    return;
-  }
-  String encoded = base64::encode(fb->buf, fb->len);
-
-  Serial.println(encoded);
-  
-  if ((WiFi.status() == WL_CONNECTED)) { //Check the current connection status
-    HTTPClient http;
-    http.begin("https://facemask-apim.azure-api.net/tensorpython37/HttpTrigger1?flag=read", root_ca); //Specify the URL and certificate
-    http.addHeader("Content-Type", "text/plain");
-    http.addHeader("Ocp-Apim-Subscription-Key", key);
-    int httpCode = http.POST(encoded);                                                  //Make the request
-    if (httpCode > 0) { //Check for the returning code
-        String payload = http.getString();
-        Serial.println(httpCode);
-        Serial.println(payload);
-      }
-    else {
-      Serial.println(httpCode);
-      Serial.println("Error on HTTP request");
-    }
-    http.end(); 
-  }
+digitalWrite(13, HIGH);
 }
 
 void loop() {
+  if ((WiFi.status() == WL_CONNECTED)) {
+  if (button.getSingleDebouncedRelease())
+  {
+    digitalWrite(14, LOW);
+    digitalWrite(15, LOW);
+    digitalWrite(13, LOW);
+    
+    camera_fb_t * fb = NULL;
+    // Take Picture with Camera
+    fb = esp_camera_fb_get();
+    if (!fb) {
 
+      return;
+    }
+    
+    String encoded = base64::encode(fb->buf, fb->len);
+     //Check the current connection status
+      HTTPClient http;
+      http.begin("https://facemask-apim.azure-api.net/tensorpython37/HttpTrigger1?flag=read", root_ca); //Specify the URL and certificate
+      http.addHeader("Content-Type", "text/plain");
+      http.addHeader("Ocp-Apim-Subscription-Key", key);
+      int httpCode = http.POST(encoded);
+      if (httpCode > 0) {
+        String payload = http.getString();
+        if (payload == "Facemask OFF")
+        {
+          digitalWrite(14, HIGH);
+        }
+        else if (payload == "Facemask ON") {
+          digitalWrite(15, HIGH);
+        }
+        else {
+          digitalWrite(13, HIGH);
+        }
+      }
+      else {
+        digitalWrite(13, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(14, HIGH);
+      }
+      http.end();
+    }
+  }
+  else{
+    WiFi.disconnect();
+    WiFi.reconnect();
+  }
 }

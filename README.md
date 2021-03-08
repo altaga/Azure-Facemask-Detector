@@ -18,7 +18,7 @@ Implementación real de un servicio de detección de cubre bocas powereado por A
 - [Azure API implementation](#azure-api-implementation)
   - [Hardware Tested with the API](#hardware-tested-with-the-api)
   - [Devices Tested with the webapp](#devices-tested-with-the-webapp)
-- [EPIC DEMO:](#epic-demo)
+- [EPIC DEMO](#epic-demo)
 
 # Introduction
 
@@ -188,7 +188,7 @@ WebpageCode:
 Video: Click on the image
 [![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)
 
-# EPIC DEMO:
+# EPIC DEMO
 
 Video: Click on the image
 [![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)

@@ -3,6 +3,13 @@
 Implementación real de un servicio de detección de cubre bocas powereado por Azure ML, Function App y Azure API Management Service.
 
 - [Azure Facemask Detector](#azure-facemask-detector)
+- [Introduction](#introduction)
+- [Solution](#solution)
+  - [Current Solutions](#current-solutions)
+- [Materials](#materials)
+  - [Hardware](#hardware)
+  - [Software](#software)
+- [Connection Diagram](#connection-diagram)
 - [AzureML Model Training](#azureml-model-training)
   - [Azure ML Settings](#azure-ml-settings)
 - [Azure Model Deployment](#azure-model-deployment)
@@ -11,10 +18,60 @@ Implementación real de un servicio de detección de cubre bocas powereado por A
 - [Azure API implementation](#azure-api-implementation)
   - [Hardware Tested with the API](#hardware-tested-with-the-api)
   - [Devices Tested with the webapp](#devices-tested-with-the-webapp)
+- [EPIC DEMO:](#epic-demo)
+
+# Introduction
+
+INVENTA ALGO
+
+# Solution
+
+INVENTA ALGO
+
+## Current Solutions
+
+lista de sluciones similares
+
+# Materials
+
+## Hardware
+
+- ESP32 Cam.
+  - https://www.amazon.com/Bluetooth-Low-Power-Dual-core-Monitoring-Identification/dp/B07Q4BY77Q/ref=sr_1_2?dchild=1&keywords=ai+thinker&qid=1615175201&sr=8-2
+- RaspberryPi 4.
+  - https://www.amazon.com/CanaKit-Raspberry-Basic-Kit-8GB/dp/B08DJ9MLHV/ref=sr_1_3?crid=1TQ9UPBSVAFMF&dchild=1&keywords=raspberry+pi+4&qid=1615175226&sprefix=raspberr%2Caps%2C243&sr=8-3
+- RaspberryPi Camera.
+  - https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS/ref=sr_1_3?dchild=1&keywords=raspberry+pi+camera&qid=1615175239&sr=8-3
+- Smartphone.
+- Desktop Computer.
+
+## Software
+
+- ArduinoIDE (ESP32)
+  - https://www.arduino.cc/en/main/OldSoftwareReleases
+- RaspberryPi OS (RaspberryPi)
+  - https://www.raspberrypi.org/software/
+- ReactJS (WebApp)
+  - https://reactjs.org/
+- Postman
+  - https://www.postman.com/
+- TensorFlow
+  - https://www.tensorflow.org/
+- Microsoft Azure Services:
+  - Azure Machine Learning
+    - https://azure.microsoft.com/en-us/free/machine-learning
+  - Azure Function App
+    - https://azure.microsoft.com/en-us/services/functions/
+  - Azure API Management
+    - https://azure.microsoft.com/en-us/services/api-management/
+
+# Connection Diagram
+
+<img src="./Images/General.png">
 
 # AzureML Model Training
 
-El modelo de inteligencia artifial se entreno en la plataforma de Machine Learning de Azure, con el framework de TensorFlow, todas las caracteristicas de el environment de entrenamiento fueron las siguientes:
+El modelo de inteligencia artificial se entreno en la plataforma de Machine Learning de Azure, con el framework de TensorFlow, todas las características de el environment de entrenamiento fueron las siguientes:
 
 ## Azure ML Settings
 
@@ -108,12 +165,14 @@ Gracias a que es un servicio que es posible ser consumido por API, podemos prác
 Codes: https://github.com/altaga/Azure-Facemask-Detector/tree/main/Devices%20Tested
 
   - ESP32 Cam
-  
-<img src="Images/Imagen ya con CASE">
+
+Video: Click on the image
+[![DEMOesp](Images/Imagen ya con CASE)](YOUTUBELINK)
 
   - RPI4 with Camera
 
-<img src="Images/Imagen ya con CASE">
+Video: Click on the image
+[![DEMORPI](Images/Imagen ya con CASE)](YOUTUBELINK)
   
 ## Devices Tested with the webapp
 
@@ -125,3 +184,11 @@ WebpageCode:
   - Samsung Galaxy S10+
   - iPhone
   - Desktop
+
+Video: Click on the image
+[![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)
+
+# EPIC DEMO:
+
+Video: Click on the image
+[![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)

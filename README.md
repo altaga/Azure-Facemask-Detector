@@ -196,4 +196,4 @@ Video (Demo Desktop): Click on the image
 # EPIC DEMO
 
 Video: Click on the image
-[![DEMO](Images/Logos.png)](YOUTUBELINK)
+[![DEMO](Images/Log.png)](YOUTUBELINK)

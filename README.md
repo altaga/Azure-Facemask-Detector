@@ -2,7 +2,7 @@
 
 Implementación real de un servicio de detección de cubre bocas powereado por Azure ML, Function App y Azure API Management Service.
 
-<img src="./Images/Logos.png">
+<img src="./Images/Log.png">
 
 - [Azure Facemask Detector](#azure-facemask-detector)
 - [Introduction](#introduction)

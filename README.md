@@ -174,7 +174,7 @@ Video (Demo ESP32): Click on the image
   - RPI4 with Camera
 
 Video (Demo Raspberry): Click on the image
-[![DEMORPI](Images/image.png)](https://youtu.be/TaQvohoUtGU)
+[![DEMORPI](Images/Image.png)](https://youtu.be/TaQvohoUtGU)
   
 ## Devices Tested with the webapp
 

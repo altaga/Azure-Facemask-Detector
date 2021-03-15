@@ -2,6 +2,8 @@
 
 Implementación real de un servicio de detección de cubre bocas powereado por Azure ML, Function App y Azure API Management Service.
 
+<img src="./Images/Logos.png">
+
 - [Azure Facemask Detector](#azure-facemask-detector)
 - [Introduction](#introduction)
 - [Solution](#solution)
@@ -166,29 +168,32 @@ Codes: https://github.com/altaga/Azure-Facemask-Detector/tree/main/Devices%20Tes
 
   - ESP32 Cam
 
-Video: Click on the image
-[![DEMOesp](Images/Imagen ya con CASE)](YOUTUBELINK)
+Video (Demo ESP32): Click on the image
+[![DEMOesp](Images/esp32.png)](https://youtu.be/W54PEV317bA)
 
   - RPI4 with Camera
 
-Video: Click on the image
-[![DEMORPI](Images/Imagen ya con CASE)](YOUTUBELINK)
+Video (Demo Raspberry): Click on the image
+[![DEMORPI](Images/image.png)](https://youtu.be/TaQvohoUtGU)
   
 ## Devices Tested with the webapp
 
 WebpageCode: 
 
-(la pagina web consume directamente de la misma API):
+(la pagina web consume directamente de la misma API, puede probar la pagina web usted mismo en el siguiente enlace):
 
 - Web App Tested: https://polite-bush-0d957ae10.azurestaticapps.net/
   - Samsung Galaxy S10+
   - iPhone
   - Desktop
 
-Video: Click on the image
-[![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)
+Video (Demo Smartphone): Click on the image
+[![DEMOsmartphone](Images/smart.png)](https://youtu.be/-1RQ035hQJ0)
+
+Video (Demo Desktop): Click on the image
+[![DEMOsmartphone](Images/desktop.png)](https://youtu.be/Jf71H3Uy2Kc)
 
 # EPIC DEMO
 
 Video: Click on the image
-[![DEMOsmartphone](Images/Imagenchida)](YOUTUBELINK)
+[![DEMO](Images/Logos.png)](YOUTUBELINK)

@@ -5,9 +5,9 @@ Implementación real de un servicio de detección de cubre bocas powereado por A
 <img src="./Images/Log.png">
 
 - [Azure Facemask Detector](#azure-facemask-detector)
-- [Introduction](#introduction)
+- [**Introduction**](#introduction)
+- [**Problem**](#problem)
 - [Solution](#solution)
-  - [Current Solutions](#current-solutions)
 - [Materials](#materials)
   - [Hardware](#hardware)
   - [Software](#software)
@@ -23,41 +23,63 @@ Implementación real de un servicio de detección de cubre bocas powereado por A
 - [Device Images on businesses](#device-images-on-businesses)
 - [EPIC DEMO](#epic-demo)
 
-# Introduction
+# **Introduction**
 
-INVENTA ALGO
+COVID-19 has changed our daily lives and continues to do so. Many retail stores and companies have gone out of business, unable to offer their services to their clients. However some others which have opted for the reopening of their businesses in turn have had to adapt to the times.This includes public institutions such as museums, libraries, etc. All these establishments have taken their precautionary measures, generating new regulations, such as forcing customers and / or visitors to wear face masks at all times. [1](#1).
+
+<img src="https://i.ibb.co/8xsD8DZ/image.png" width="1000">
+
+Given this new environment, businesses have had to create neew kinds of jobs or jobs to be done. One of these is to check the use of the mask and check the temperature of the customers before entering the establishment, risking not only the worker who is checking the temperature of the customers, but to the customers who enter the place.
+
+1. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
+
+# **Problem**
+
+This job generates an annual cost per worker of at least $30,000 [1] and if that employee were to become ill with covid-19, by law (in the United States) they would have to pay him at least $511 a day [2].
+
+These costs (both moneetary and health wise) for an employee who performs a repetitive task is excessive but necessary, because the solutions currently created are not yet sufficient to replace this position.
+
+- The Xovis all-in-one solution - https://www.xovis.com/en/products/detail/face-mask-detection/
+    - Only detection of the use of face masks, without temperature measurement, or access control.
+- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+    - Only detection of the use of face masks, without temperature measurement, or access control.
+- Leewayhertz - https://www.leewayhertz.com/face-mask-detection-system/
+    - Only detection of the use of face masks, without temperature measurement, or access control.
+
+Most of the devices on the market only detect the use of the mask, however this project seeks to generate a complete solution for access control.
+
+1. https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
+2. https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
 
 # Solution
 
-INVENTA ALGO
-
-## Current Solutions
-
-lista de sluciones similares
+<img src="./Images/solution.png">
 
 # Materials
+ 
+**Optional** *  
 
 ## Hardware
 
-- ESP32 Cam.
-  - https://www.amazon.com/Bluetooth-Low-Power-Dual-core-Monitoring-Identification/dp/B07Q4BY77Q/ref=sr_1_2?dchild=1&keywords=ai+thinker&qid=1615175201&sr=8-2
-- RaspberryPi 4.
+- RaspberryPi 4
   - https://www.amazon.com/CanaKit-Raspberry-Basic-Kit-8GB/dp/B08DJ9MLHV/ref=sr_1_3?crid=1TQ9UPBSVAFMF&dchild=1&keywords=raspberry+pi+4&qid=1615175226&sprefix=raspberr%2Caps%2C243&sr=8-3
-- RaspberryPi Camera.
+- RaspberryPi Camera or USB Camera
   - https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS/ref=sr_1_3?dchild=1&keywords=raspberry+pi+camera&qid=1615175239&sr=8-3
-- Smartphone.
-- Desktop Computer.
+- MLX90614
+  - https://www.amazon.com/dp/B071VF2RWM/ref=cm_sw_em_r_mt_dp_8594C7K62CE9DK4E9YFZ
+- RPI Display
+  - https://www.amazon.com/dp/B01J51CXU4/ref=cm_sw_em_r_mt_dp_AZVG8G6P3XVZ37GF04S7
+- ESP32 Cam *
+  - https://www.amazon.com/Bluetooth-Low-Power-Dual-core-Monitoring-Identification/dp/B07Q4BY77Q/ref=sr_1_2?dchild=1&keywords=ai+thinker&qid=1615175201&sr=8-2
+- Smartphone *
+- Desktop Computer *
 
 ## Software
 
-- ArduinoIDE (ESP32)
-  - https://www.arduino.cc/en/main/OldSoftwareReleases
 - RaspberryPi OS (RaspberryPi)
   - https://www.raspberrypi.org/software/
 - ReactJS (WebApp)
   - https://reactjs.org/
-- Postman
-  - https://www.postman.com/
 - TensorFlow
   - https://www.tensorflow.org/
 - Microsoft Azure Services:
@@ -67,6 +89,10 @@ lista de sluciones similares
     - https://azure.microsoft.com/en-us/services/functions/
   - Azure API Management
     - https://azure.microsoft.com/en-us/services/api-management/
+- Postman * (Testing)
+  - https://www.postman.com/
+- ArduinoIDE * (ESP32)
+  - https://www.arduino.cc/en/main/OldSoftwareReleases
 
 # Connection Diagram
 

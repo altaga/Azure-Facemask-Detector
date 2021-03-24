@@ -20,6 +20,7 @@ Implementación real de un servicio de detección de cubre bocas powereado por A
 - [Azure API implementation](#azure-api-implementation)
   - [Hardware Tested with the API](#hardware-tested-with-the-api)
   - [Devices Tested with the webapp](#devices-tested-with-the-webapp)
+- [Device Images on businesses](#device-images-on-businesses)
 - [EPIC DEMO](#epic-demo)
 
 # Introduction
@@ -192,6 +193,16 @@ Video (Demo Smartphone): Click on the image
 
 Video (Demo Desktop): Click on the image
 [![DEMOsmartphone](Images/desktop.png)](https://youtu.be/Jf71H3Uy2Kc)
+
+# Device Images on businesses
+
+Icecream Shop:
+
+<img src="./Images/icecream.png">
+
+Make Up Shop:
+
+<img src="./Images/makeup.png">
 
 # EPIC DEMO
 

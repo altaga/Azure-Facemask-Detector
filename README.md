@@ -100,7 +100,7 @@ Most of the devices on the market only detect the use of the mask, however this 
 
 # AzureML Model Training
 
-El modelo de inteligencia artificial se entreno en la plataforma de Machine Learning de Azure, con el framework de TensorFlow, todas las características de el environment de entrenamiento fueron las siguientes:
+The artificial intelligence model was trained on the Azure Machine Learning platform, with the TensorFlow framework, all the characteristics of the training environment were the following:
 
 ## Azure ML Settings
 
@@ -113,37 +113,36 @@ El modelo de inteligencia artificial se entreno en la plataforma de Machine Lear
   - Kernel:
     - Python 3.6.9
 
-Todo el codigo estara en el siguiente enlace:
+All the code in in the following link:
 
 https://github.com/altaga/Azure-Facemask-Detector/tree/main/Azure%20ML%20Train
 
-Una vez los descargues tendrás que ponerlo en la interfaz de Azure de la siguiente forma.
+Once you download it you will have to put it in the Azure interface as follows.
 
 <img src="./Images/ML.png">
 
-Una Vez hecho esto podremos correr el entrenamiento sin problema, el codigo ya esta diseñado para bajar la base de datos se nuestro repositorio.
+Once this is done we can run the training without problem, the code is already designed to download the database from our repository.
 
 https://github.com/altaga/Facemask-Opt-Dataset
 
-Una vez inicie el entrenamiento hay que poner mucha atencion al Link que aparecera en la interfaz, ya que con este link podremos acceder al model cuando termine el programa de ejecutarse.
+After the training begins, pay close attention to the Link that will appear on the interface, since with this link we will be able to access the model when the program ends.
 
 <img src="./Images/MLlink.png">
 
-Una vez termine el entrenamiento podremos descargar nuestro modelo de la siguiente forma, el modelo que estamos descargando es un modelo optimizado para tensorflow lite.
-
+Once the training is finished we can download our model in the following way, the model we are downloading is a model optimized for tensorflow lite.
 <img src="./Images/MLdownload.png">
 
-Ahora pasaremos a mostrar como realizamos el despliegue de nuestro modelo en una Function App.
+Now we will go on to show how we carry out the deployment of our model in a Function App.
 
 # Azure Model Deployment
 
-Para el deployment en cloud de nuestro modelo realizamos una function app, la cual es la que se encargara de ejecutar la interpretacion del modelo y la evaluacion del mismo, cada vez que le pasemos una imagen.
+For the cloud deployment of our model, we make an app function, which is the one that will be in charge of executing the interpretation of the model and its evaluation, each time we pass an image to it.
 
 <img src="./Images/MLscheme.png">
  
 ## Azure Function App
 
-Las especificaciones relevantes de esta función son las siguientes:
+The relevant specifications of this function are as follows:
 
 - App Service Plan: 
   - CentralUSLinuxDynamicPlan (Y1: 0)
@@ -154,17 +153,17 @@ Las especificaciones relevantes de esta función son las siguientes:
   - Tflite Interpreter 1.0.1
   - OpenCV 4.5.1.48
 
-Todos los archivos que hacen funcionar a esta función están en el URL.
+All the files that make this function work are in the URL.
 
 https://github.com/altaga/Azure-Facemask-Detector/tree/main/Azure%20Function%20App
 
-Específicamente para que funcione tenemos que tener en el archivo requirements.txt de la función los siguientes paquetes.
+Specifically for it to work we have to have the following packages in the requirements.txt file of the function.
 
     azure-functions
     https://github.com/google-coral/pycoral/releases/download/v1.0.1/tflite_runtime-2.5.0-cp37-cp37m-linux_x86_64.whl
     opencv-python
 
-Todas las imágenes que mandemos a evaluarse en la función deberán mantener un aspect ratio de 4:3 o 3:4, no importando el tamaño de la imagen.
+All the images that we send to be evaluated in the function must maintain an aspect ratio of 4: 3 or 3: 4, regardless of the size of the image.
 
 # Azure Function App Deployment as API
 

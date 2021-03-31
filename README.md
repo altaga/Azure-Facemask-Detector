@@ -167,11 +167,11 @@ All the images that we send to be evaluated in the function must maintain an asp
 
 # Azure Function App Deployment as API
 
-Para realizar la API de esta funcion agregaremos del menu lateral una API Management, para usar esta función requerimos que este disponible la operación POST.
+To perform the API of this function we will add an API Management from the side menu, to use this function we require that the POST operation is available.
 
 <img src="Images/API.png">
 
-Una vez este todo esto seteado, podremos probar nuestra API con Postman.
+After all this setup we can go to Postman:
 
     curl --location --request POST 'https://facemask-apim.azure-api.net/tensorpython37/HttpTrigger1?flag=read' \
     --header 'Ocp-Apim-Subscription-Key: YOURAPPKEY' \
@@ -180,13 +180,13 @@ Una vez este todo esto seteado, podremos probar nuestra API con Postman.
 
 <img src="Images/postman.gif">
 
-La imagen que se uso para este test esta en la carpeta.
+The image used for this is in the following folder:
 
 https://github.com/altaga/Azure-Facemask-Detector/tree/main/PostmanDemoImage
 
 # Azure API implementation
 
-Gracias a que es un servicio que es posible ser consumido por API, podemos prácticamente utilizar cualquier dispositivo de HW o SW para realizar la implementación. En este caso nosotros mostramos como realizamos esta implementación en los siguientes devices y plataformas.
+Thanks to the fact that it is a service that can be consumed by API, we can practically use any HW or SW device to perform the implementation. In this case, we can show how we carry out this implementation in the following devices and platforms.
 
 ## Hardware Tested with the API
 

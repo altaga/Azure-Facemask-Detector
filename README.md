@@ -206,7 +206,7 @@ Video (Demo Raspberry): Click on the image
 
 WebpageCode: 
 
-(la pagina web consume directamente de la misma API, puede probar la pagina web usted mismo en el siguiente enlace):
+(the web page consumes directly from the same API, you can test the web page yourself in the following link):
 
 - Web App Tested: https://polite-bush-0d957ae10.azurestaticapps.net/
   - Samsung Galaxy S10+

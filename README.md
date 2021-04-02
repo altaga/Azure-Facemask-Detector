@@ -1,3 +1,7 @@
+## Try it out 
+
+### 
+
 # Azure Facemask Detector
 
 Real implementation of a facemask detection service powered by Azure ML, Function App and Azure API Management Service.

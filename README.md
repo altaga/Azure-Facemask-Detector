@@ -7,8 +7,9 @@ Please allow access to your camera!
 # Azure Facemask Detector
 
 Real implementation of a facemask detection service powered by Azure ML, Function App and Azure API Management Service.
-
-<img src="./Images/Log.png" width="300">
+<p align="center">
+  <img src="./Images/Log.png" width="300">
+</p>
 
 # Index
 

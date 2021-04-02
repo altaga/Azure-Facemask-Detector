@@ -1,4 +1,4 @@
-## Try it out 
+## Try it out!
 
 ### https://polite-bush-0d957ae10.azurestaticapps.net/
 

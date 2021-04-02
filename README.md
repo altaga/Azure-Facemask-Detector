@@ -242,4 +242,4 @@ Make Up Shop:
 
 Video: Click on the image
 
-[![DEMO](Images/Log.png)](https://youtu.be/MIXdYK_d5GE)
+[![DEMO](https://i.ibb.co/R4zFQcJ/Log-medium-medium.png)](https://youtu.be/MIXdYK_d5GE)

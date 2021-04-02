@@ -1,5 +1,7 @@
 ## Try it out!
 
+Please allow access to your camera!
+
 ### https://polite-bush-0d957ae10.azurestaticapps.net/
 
 # Azure Facemask Detector

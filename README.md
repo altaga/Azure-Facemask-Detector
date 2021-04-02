@@ -10,6 +10,8 @@ Real implementation of a facemask detection service powered by Azure ML, Functio
 
 <img src="./Images/Log.png" width="300">
 
+# Index
+
 - [Azure Facemask Detector](#azure-facemask-detector)
 - [**Introduction**](#introduction)
 - [**Problem**](#problem)

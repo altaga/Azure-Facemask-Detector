@@ -241,6 +241,4 @@ Make Up Shop:
 # EPIC DEMO
 
 Video: Click on the image
-<p align="center">
 [![DEMO](https://i.ibb.co/R4zFQcJ/Log-medium-medium.png)](https://youtu.be/MIXdYK_d5GE)
-</p>
